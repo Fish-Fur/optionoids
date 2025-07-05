@@ -1,0 +1,34 @@
+plugins:
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 3.0
+  SuggestExtensions: false
+  NewCops: enable
+  Exclude:
+    - "bin/**/*"
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/CyclomaticComplexity:
+  Exclude:
+    - "spec/**/*"
+
+Metrics/MethodLength:
+  Exclude:
+    - "spec/**/*"
+
+RSpec/MultipleExpectations:
+  Max: 2
